@@ -2097,8 +2097,8 @@ textarea.w-input, textarea.w-select {
 
 :root {
   --white-smoke: #ebf1f5;
-  --black: #070707;
-  --text-gray: #9ba1a0;
+  --black: #333333;
+  --text-gray: #2c2c36;
   --white: white;
   --gainsboro: #dee2e5;
   --gray: #c2c4c6;

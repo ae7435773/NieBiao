@@ -40,6 +40,7 @@ abbr[title] {
 
 b, strong {
   font-weight: bold;
+  font-weight: 600;
 }
 
 dfn {
@@ -2127,7 +2128,7 @@ textarea.w-input, textarea.w-select {
 
 :root {
   --white-smoke: #ebf1f5;
-  --black: #070707;
+  --black: #222222;
   --text-gray: #9ba1a0;
   --white: white;
   --gainsboro: #dee2e5;
@@ -3479,23 +3480,25 @@ h4 {
 }
 
 h5 {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 16px;
+  margin-bottom: 16px;
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
+  color: #333333;
 }
 
 h6 {
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 10px;
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 18px;
+  color: #505963;
 }
 
 p {
-  margin-bottom: 10px;
+  margin-bottom: 24px;
 }
 
 a {
@@ -3515,11 +3518,11 @@ ul, ol {
 }
 
 blockquote {
-  border-left: 5px solid #e2e2e2;
+  border-left: 4px solid #d9e0e9;
   margin-bottom: 10px;
-  padding: 10px 20px;
-  font-size: 18px;
-  line-height: 22px;
+  padding: 2px 20px;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .styleguide-spacing-all {
@@ -4106,7 +4109,7 @@ blockquote {
 }
 
 .text-rich-text h5 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   line-height: 1.2;
 }
 
@@ -4117,6 +4120,12 @@ blockquote {
 
 .text-rich-text p, .text-rich-text ul, .text-rich-text ol, .text-rich-text blockquote {
   color: var(--text-gray);
+}
+
+.text-rich-text p, .text-rich-text blockquote {
+  color:#505963;
+  font-size:16px;
+  line-height:24px;
 }
 
 .container-large {
