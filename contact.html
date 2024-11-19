@@ -63,7 +63,7 @@
                                 <!-- 最大宽度限制，内容居中对齐 -->
                                 <p class="text-size-regular text-align-center">
                                     <!-- 正常大小的文字，内容居中对齐 -->
-                                    欢迎通过以下方式与我联系，期待合力共创！
+                                    欢迎与我联系，期待合力共创！
                                 </p>
                             </div>
                         </div>
@@ -295,5 +295,25 @@
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 
 <script src="static/js/webflow.b99ccbe45.js" type="text/javascript"></script>
+
+<script>
+    document.getElementById('email-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // 阻止表单的默认提交行为
+
+        // 获取表单数据
+        var formData = new FormData(this);
+        var name = formData.get('name');
+        var email = formData.get('email'); // 注意：这是用户输入的邮箱，不是收件人邮箱
+        var subject = formData.get('Subject');
+        var message = formData.get('Message').replace(/\r?\n/g, '%0A');
+
+        // 构建mailto链接
+        var recipient = 'ae743573@yeah.net'; // 发送到的邮箱
+        var mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent('您好，\n\n姓名: ' + name + '\n邮箱: ' + email + '\n\n' + message)}`;
+
+        window.open(mailtoLink, '_blank'); // 在新标签页中打开
+    });
+</script>
+
 </body>
 </html>
